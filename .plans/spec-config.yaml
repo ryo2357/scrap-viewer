@@ -1,0 +1,9 @@
+exclude:
+  - node_modules/
+  - target/
+  - .git/
+  - dist/
+
+fixed:
+  output/:
+    description: 出力フォルダ

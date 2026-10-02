@@ -1,0 +1,29 @@
+[tasks.dev]
+description = "デバッグ実行を行う"
+shell = "nu -c"
+run = [
+  "pnpm exec tauri dev",
+]
+
+[tasks.setup]
+description = "pnpmのセットアップを行う"
+shell = "nu -c"
+run = [
+  "pnpm install",
+]
+
+[tasks.check]
+description = "プロジェクトのチェックを行う"
+shell = "nu -c"
+run = [
+  "pnpm run check",
+  "cargo check --manifest-path src-tauri/Cargo.toml",
+]
+
+[tasks.build]
+description = "プロジェクトのビルドを行う"
+shell = "nu -c"
+run = [
+  "pnpm exec tauri build --no-bundle",
+]
+# src-tauri/target/release/scrap-viewer.exeをパスが通っているフォルダにコピーすればいい
